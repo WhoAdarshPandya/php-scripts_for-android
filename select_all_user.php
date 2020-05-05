@@ -17,8 +17,8 @@
             $user['password'] = $row["user_password"];
             array_push($response["users"],$user);
         }
-        $response['success']=0;
-        $response['message']="failed to fetch results";
+        $response['success']=1;
+        $response['message']="to fetch results";
         echo json_encode($response);
     }
     else{

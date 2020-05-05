@@ -6,11 +6,11 @@
     define('DB_SERVER', "localhost:1008");
 
     $db = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE) or die(mysql_error());
-    if(isset($_GET['name']) && isset($_GET['price']) && isset($_GET['id']))
+    if(isset($_POST['name']) && isset($_POST['price']) && isset($_POST['id']))
     {
-        $name = $_GET['name'];
-        $price = $_GET['price'];
-        $id = $_GET['id'];
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+        $id = $_POST['id'];
         $result =mysqli_query($db,"UPDATE products SET product_name = '$name' , product_price = '$price' where product_id = '$id'");
         if($result){
             $response["success"] = 1;
