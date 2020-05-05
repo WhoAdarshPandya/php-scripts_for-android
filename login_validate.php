@@ -4,7 +4,7 @@
     define('DB_PASSWORD', ""); // db password (mention your db password here)
     define('DB_DATABASE', "android_php"); // database name
     define('DB_SERVER', "localhost:1008");
- 
+
     $db = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE) or die(mysql_error());
     if(isset($_POST['email']))
     {
